@@ -2,43 +2,49 @@
 
 # DOCS - README.MD
 
+############################
+#          Global          #
+############################
+
+menu-name: "<#44a6db><b><italic:false>Admin Shop</b></reset>"
+
 ##############################
 #          Category          #
 ##############################
 
 categories:
   "blocks":
-    name: "<#c79b50><b>Catégorie ・ Blocks</b></color>"
+    name: "<#c79b50><b><italic:false>Catégorie ・ Blocks</b></reset>"
     icon: "BRICK"
 
     position: 1
 
   "utilities":
-    name: "<#c79b50><b>Catégorie ・ Utilitaires</b></color>"
-    icon: "REDTONE"
+    name: "<#c79b50><b><italic:false>Catégorie ・ Utilitaires</b></reset>"
+    icon: "REDSTONE"
 
     position: 2
 
   "ores":
-    name: "<#c79b50><b>Catégorie ・ Minerais</b></color>"
+    name: "<#c79b50><b><italic:false>Catégorie ・ Minerais</b></reset>"
     icon: "DIAMOND_ORE"
 
     position: 3
 
   "cultures":
-    name: "<#c79b50><b>Catégorie ・ Cultures</b></color>"
+    name: "<#c79b50><b><italic:false>Catégorie ・ Cultures</b></reset>"
     icon: "WHEAT"
 
     position: 4
 
   "aw":
-    name: "<#c79b50><b>Catégorie ・ Armes & Armure</b></color>"
+    name: "<#c79b50><b><italic:false>Catégorie ・ Armes & Armure</b></reset>"
     icon: "DIAMOND_SWORD"
 
     position: 5
 
   "loots":
-    name: "<#c79b50><b>Catégorie ・ Butin des Monstres</b></color>"
+    name: "<#c79b50><b><italic:false>Catégorie ・ Butin des Monstres</b></reset>"
     icon: "GUNPOWDER"
 
     position: 6

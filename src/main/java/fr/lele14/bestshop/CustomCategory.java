@@ -7,14 +7,14 @@ import java.util.List;
 
 public class CustomCategory {
 
-    private String name;
+    private final String name;
 
     private Material icon;
-    private String iName;
+    private final String iName;
 
-    private int position;
+    private final int position;
 
-    private List<CustomItem> items = new ArrayList<>();
+    private final List<CustomItem> items = new ArrayList<>();
 
     public CustomCategory(String name, String mName, int position) {
 

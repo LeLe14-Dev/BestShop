@@ -1,0 +1,98 @@
+# Config.YML - BestShop plugin configuration file
+
+# DOCS - README.MD
+
+############################
+#          Global          #
+############################
+
+menu-name: "<#44a6db><b><italic:false>Admin Shop</b></reset>"
+
+##############################
+#          Category          #
+##############################
+
+categories:
+  "blocks":
+    name: "<#c79b50><b><italic:false>Catégorie ・ Blocks</b></reset>"
+    icon: "BRICK"
+
+    position: 1
+
+  "utilities":
+    name: "<#c79b50><b><italic:false>Catégorie ・ Utilitaires</b></reset>"
+    icon: "REDSTONE"
+
+    position: 2
+
+  "ores":
+    name: "<#c79b50><b><italic:false>Catégorie ・ Minerais</b></reset>"
+    icon: "DIAMOND_ORE"
+
+    position: 3
+
+  "cultures":
+    name: "<#c79b50><b><italic:false>Catégorie ・ Cultures</b></reset>"
+    icon: "WHEAT"
+
+    position: 4
+
+  "aw":
+    name: "<#c79b50><b><italic:false>Catégorie ・ Armes & Armure</b></reset>"
+    icon: "DIAMOND_SWORD"
+
+    position: 5
+
+  "loots":
+    name: "<#c79b50><b><italic:false>Catégorie ・ Butin des Monstres</b></reset>"
+    icon: "GUNPOWDER"
+
+    position: 6
+
+
+###########################
+#          Items          #
+###########################
+
+items:
+  1:
+    material: "OAK_WOOD"
+    category: "blocks"
+
+    purchase-price: 100
+    selling-price: 10
+
+  2:
+    material: "HOPPER"
+    category: "utilities"
+
+    purchase-price: 10000
+    selling-price: 500
+
+  3:
+    material: "COAL_ORE"
+    category: "ores"
+
+    purchase-price: 2500
+    selling-price: 50
+
+  4:
+    material: "WHEAT"
+    category: "cultures"
+
+    purchase-price: 1000
+    selling-price: 25
+
+  5:
+    material: "IRON_SWORD"
+    category: "aw"
+
+    purchase-price: 7500
+    selling-price: 150
+
+  6:
+    material: "ROTTEN_FLESH"
+    category: "loots"
+
+    purchase-price: 1000
+    selling-price: 25

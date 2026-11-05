@@ -12,6 +12,8 @@ public class Manager {
 
     public static void init() {
 
+        categories.clear();
+
         ConfigurationSection categorySection = Main.getPlugin().getConfig().getConfigurationSection("categories");
 
         if (!(categorySection == null)) {
@@ -60,5 +62,10 @@ public class Manager {
                 }
             }
         }
+    }
+
+    public static List<CustomCategory> getCategories() {
+
+        return categories;
     }
 }

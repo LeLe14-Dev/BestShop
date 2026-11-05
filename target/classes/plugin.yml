@@ -1,0 +1,32 @@
+name: BestShop
+description: Plugin to set up your own admin shop
+version: 1.0
+
+main: fr.lele14.bestshop.Main
+api-version: '26.2'
+load: POSTWORLD
+
+authors: [ LeLe14 ]
+
+commands:
+
+  bestshop:
+    description: This is the main command of the plugin
+    usage: §cSi ce message apparait, contactez un administrateur pour réparer la commande !
+    aliases: [ bs ]
+    permission: bestshop.command.bestshop
+
+  adminshop:
+    description: This command lets you access the admin shop
+    usage: §cSi ce message apparait, contactez un administrateur pour réparer la commande !
+    aliases: [ shop, s, sa, as ]
+    permission: bestshop.command.admin.adminshop
+
+permissions:
+  bestshop.command.adminshop:
+    description: This permission allows you to use the /shop command
+    default: true
+
+  bestshop.command.admin.bestshop:
+    description: This permission allows you to use the /bestshop command
+    default: op
