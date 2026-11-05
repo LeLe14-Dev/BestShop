@@ -1,0 +1,9 @@
+name: BestShop
+description: Plugin to set up your own admin shop
+version: 1.0
+
+main: fr.lele14.bestshop.Main
+api-version: '26.2'
+load: POSTWORLD
+
+authors: [ LeLe14 ]

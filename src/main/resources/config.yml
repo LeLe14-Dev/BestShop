@@ -1,0 +1,92 @@
+# Config.YML - BestShop plugin configuration file
+
+# DOCS - README.MD
+
+##############################
+#          Category          #
+##############################
+
+categories:
+  "blocks":
+    name: "<#c79b50><b>Catégorie ・ Blocks</b></color>"
+    icon: "BRICK"
+
+    position: 1
+
+  "utilities":
+    name: "<#c79b50><b>Catégorie ・ Utilitaires</b></color>"
+    icon: "REDTONE"
+
+    position: 2
+
+  "ores":
+    name: "<#c79b50><b>Catégorie ・ Minerais</b></color>"
+    icon: "DIAMOND_ORE"
+
+    position: 3
+
+  "cultures":
+    name: "<#c79b50><b>Catégorie ・ Cultures</b></color>"
+    icon: "WHEAT"
+
+    position: 4
+
+  "aw":
+    name: "<#c79b50><b>Catégorie ・ Armes & Armure</b></color>"
+    icon: "DIAMOND_SWORD"
+
+    position: 5
+
+  "loots":
+    name: "<#c79b50><b>Catégorie ・ Butin des Monstres</b></color>"
+    icon: "GUNPOWDER"
+
+    position: 6
+
+
+###########################
+#          Items          #
+###########################
+
+items:
+  1:
+    material: "OAK_WOOD"
+    category: "blocks"
+
+    purchase-price: 100
+    selling-price: 10
+
+  2:
+    material: "HOPPER"
+    category: "utilities"
+
+    purchase-price: 10000
+    selling-price: 500
+
+  3:
+    material: "COAL_ORE"
+    category: "ores"
+
+    purchase-price: 2500
+    selling-price: 50
+
+  4:
+    material: "WHEAT"
+    category: "cultures"
+
+    purchase-price: 1000
+    selling-price: 25
+
+  5:
+    material: "IRON_SWORD"
+    category: "aw"
+
+    purchase-price: 7500
+    selling-price: 150
+
+  6:
+    material: "ROTTEN_FLESH"
+    category: "loots"
+
+    purchase-price: 1000
+    selling-price: 25
