@@ -66,5 +66,16 @@ public class MainInventory implements Listener {
         if (!e.getView().title().equals(menuTitle)) return;
 
         e.setCancelled(true);
+
+        for (CustomCategory category : Manager.getCategories()) {
+
+            int position = category.getPosition();
+
+            if (slot == position - 1) {
+
+                CategoryInventory.openInventory(p, category);
+            }
+
+        }
     }
 }

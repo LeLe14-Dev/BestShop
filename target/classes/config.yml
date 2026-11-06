@@ -56,7 +56,7 @@ categories:
 
 items:
   1:
-    material: "OAK_WOOD"
+    material: "OAK_LOG"
     category: "blocks"
 
     purchase-price: 100

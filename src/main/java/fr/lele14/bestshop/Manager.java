@@ -25,7 +25,7 @@ public class Manager {
 
                 int position = Main.getPlugin().getConfig().getInt("categories." + category + ".position");
 
-                CustomCategory c = new CustomCategory(name, mName, position);
+                CustomCategory c = new CustomCategory(name, category, mName, position);
                 categories.add(c);
             }
         }
@@ -34,21 +34,23 @@ public class Manager {
 
         if (!(itemSection == null)) {
 
-            for (String category : itemSection.getKeys(false)) {
+            for (String lastCategory : itemSection.getKeys(false)) {
 
-                String mName = Main.getPlugin().getConfig().getString("items." + category + ".material");
-                Material material = Material.valueOf(mName);
+                int category = Integer.parseInt(lastCategory);
 
-                String categoryName = Main.getPlugin().getConfig().getString("items." + category + ".category");
+                String materialName = Main.getPlugin().getConfig().getString("items." + category + ".material");
+                Material material = Material.valueOf(materialName);
+
+                String categoryID = Main.getPlugin().getConfig().getString("items." + category + ".category");
                 CustomCategory categoryObject = null;
 
                 for (CustomCategory potentialCategory : categories) {
 
-                    String potentialCategoryName = potentialCategory.getName();
+                    String potentialCategoryID = potentialCategory.getConfigID();
 
-                    if (potentialCategoryName.equalsIgnoreCase(categoryName)) {
+                    if (potentialCategoryID.equalsIgnoreCase(categoryID)) {
 
-                        categoryObject = potentialCategory.getObject();
+                        categoryObject = potentialCategory;
                     }
                 }
 

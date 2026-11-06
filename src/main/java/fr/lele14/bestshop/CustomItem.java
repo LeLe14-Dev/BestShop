@@ -16,7 +16,7 @@ public class CustomItem {
         this.category = customCategory;
 
         this.price = price;
-        this.sell_price = price;
+        this.sell_price = sell_price;
     }
 
     public Material getMaterial() {
