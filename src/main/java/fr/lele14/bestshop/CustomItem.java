@@ -10,6 +10,8 @@ public class CustomItem {
     private final int price;
     private final int sell_price;
 
+    private int position;
+
     public CustomItem(Material material, CustomCategory customCategory, int price, int sell_price) {
 
         this.material = material;
@@ -39,6 +41,13 @@ public class CustomItem {
         return sell_price;
     }
 
+    public void setPosition(int position) {
 
+        this.position = position;
+    }
 
+    public int getPosition() {
+
+        return position;
+    }
 }

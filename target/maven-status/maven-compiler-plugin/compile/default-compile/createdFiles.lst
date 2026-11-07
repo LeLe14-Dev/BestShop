@@ -1,9 +1,11 @@
+fr\lele14\bestshop\utils\ChatManager.class
+fr\lele14\bestshop\commands\BestShopCommand.class
+fr\lele14\bestshop\CustomCategory.class
 fr\lele14\bestshop\menus\CategoryInventory.class
 fr\lele14\bestshop\Main.class
 fr\lele14\bestshop\Manager.class
 fr\lele14\bestshop\CustomItem.class
 fr\lele14\bestshop\menus\MainInventory.class
 fr\lele14\bestshop\commands\ShopCommand.class
-fr\lele14\bestshop\commands\BestShopCommand.class
 fr\lele14\bestshop\utils\MMAPI.class
-fr\lele14\bestshop\CustomCategory.class
+fr\lele14\bestshop\menus\BuyInventory.class
