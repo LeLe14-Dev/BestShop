@@ -5,6 +5,7 @@ import fr.lele14.bestshop.commands.ShopCommand;
 import fr.lele14.bestshop.menus.BuyInventory;
 import fr.lele14.bestshop.menus.CategoryInventory;
 import fr.lele14.bestshop.menus.MainInventory;
+import fr.lele14.bestshop.menus.SellInventory;
 import fr.lele14.bestshop.utils.ChatManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -14,6 +15,16 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
+
+        if (!VaultAPI.setupEconomy(this)) {
+            getLogger().severe("======================================================");
+            getLogger().severe("ERROR: The plugin 'Vault' wasn't found in the 'plugin/' folder!");
+            getLogger().severe("Deactivation of the 'BestShop' plugin.");
+            getLogger().severe("======================================================");
+
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
 
         plugin = this;
 
@@ -25,6 +36,7 @@ public final class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new CategoryInventory(), this);
         getServer().getPluginManager().registerEvents(new ChatManager(), this);
         getServer().getPluginManager().registerEvents(new BuyInventory(), this);
+        getServer().getPluginManager().registerEvents(new SellInventory(), this);
 
         var shop = getCommand("adminshop");
 

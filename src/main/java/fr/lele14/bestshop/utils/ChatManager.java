@@ -23,7 +23,7 @@ public class ChatManager implements Listener {
     private static final Map<UUID, Consumer<String>> callbacks = new ConcurrentHashMap<>();
     private static final Map<UUID, String> values = new ConcurrentHashMap<>();
 
-    public static void openChat(Player p, Consumer<String> callback) {
+    public static void openBuyChat(Player p, Consumer<String> callback) {
 
         p.closeInventory();
 
@@ -36,6 +36,21 @@ public class ChatManager implements Listener {
         ));
 
         p.sendMessage(Component.text("Écris combien tu veux acheter."));
+    }
+
+    public static void openSellChat(Player p, Consumer<String> callback) {
+
+        p.closeInventory();
+
+        callbacks.put(p.getUniqueId(), callback);
+
+        p.showTitle(Title.title(
+                Component.text("Entrez une valeur :")
+                        .color(NamedTextColor.GREEN),
+                Component.empty()
+        ));
+
+        p.sendMessage(Component.text("Écris combien tu veux vendre."));
     }
 
     @EventHandler

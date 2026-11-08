@@ -1,6 +1,7 @@
 package fr.lele14.bestshop.menus;
 
 import fr.lele14.bestshop.CustomItem;
+import fr.lele14.bestshop.VaultAPI;
 import fr.lele14.bestshop.utils.ChatManager;
 import fr.lele14.bestshop.utils.MMAPI;
 import org.bukkit.Bukkit;
@@ -174,9 +175,30 @@ public class BuyInventory implements Listener {
         if (slot == 26 && type == ClickType.LEFT) {
 
             p.closeInventory();
-            p.sendMessage(MMAPI.makeCompatible("<#78f09a>✔ Vous avez acheté <b>x" + value + " " + items.get(p.getUniqueId()).getMaterial() + "</b> pour <b>" + items.get(p.getUniqueId()).getPrice() * value + "</b>$ !</reset>"));
 
-            // On retire la monney
+            // On récupère la monney du joueur
+            double playerMonney = VaultAPI.getBalance(p);
+
+            // On vérifie sur le joueur à au moins cet argent
+            if (!(playerMonney >= items.get(p.getUniqueId()).getPrice() * value)) {
+
+                p.sendMessage(MMAPI.makeCompatible("<#f22222>✘ Vous n'avez pas asser d'argent pour acheter cet article !"));
+                return;
+            }
+
+            // Vérifie si l'inventaire est complètement plein (aucun emplacement vide)
+            if (p.getInventory().firstEmpty() == -1) {
+                p.sendMessage(MMAPI.makeCompatible("<#f22222>✘ Votre inventaire est plein ! Libérez au minimum 1 slot."));
+                return;
+            }
+
+
+            ItemStack itemStack = new ItemStack(items.get(p.getUniqueId()).getMaterial(), value);
+
+            VaultAPI.removeMoney(p, items.get(p.getUniqueId()).getPrice() * value);
+            p.getInventory().addItem(itemStack);
+
+            p.sendMessage(MMAPI.makeCompatible("<#78f09a>✔ Vous avez acheté <b>x" + value + " " + items.get(p.getUniqueId()).getMaterial() + "</b> pour <b>" + items.get(p.getUniqueId()).getPrice() * value + "</b>$ !</reset>"));
         }
     }
 }

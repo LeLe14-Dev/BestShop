@@ -4,7 +4,10 @@ version: 1.0
 
 main: fr.lele14.bestshop.Main
 api-version: '26.2'
-load: POSTWORLD
+load: STARTUP
+
+depend: [ Vault ]
+softdepend: [Essentials]
 
 authors: [ LeLe14 ]
 

@@ -95,19 +95,20 @@ public class CategoryInventory implements Listener {
 
                 if (type.isLeftClick() && currentItem.getPrice() != 0) {
 
-                    ChatManager.openChat(p, value -> {
+                    ChatManager.openBuyChat(p, value -> {
 
                         BuyInventory.openInventory(p, currentItem);
                     });
                 }
 
-                /*
-                if (type.isRightClick()) {
 
-                    // Menu d'Achat
+                if (type.isRightClick() && currentItem.getSellPrice() != 0) {
+
+                    ChatManager.openSellChat(p, value -> {
+
+                        SellInventory.openInventory(p, currentItem);
+                    });
                 }
-
-                 */
             }
         }
     }
